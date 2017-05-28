@@ -10,6 +10,25 @@
 		<title>Bitácora</title>
 	</head>
 	<body>
+		<div id="modal-text" class="modal">
+			<div class="modal-content row">
+				<div class="col s12">
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="modal-chat-title" type="text" class="validate" data-length="10" />
+							<label for="title">Título</label>
+						</div>
+						<div class="input-field col s12">
+							<textarea id="modal-chat-message" class="materialize-textarea"></textarea>
+							<label for="message">Mensaje</label>
+						</div>
+						<button class="btn waves-effect waves-light right my-orange" type="submit" name="action" data-publication="text">Publicar
+							<i class="material-icons right">send</i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<nav>
 			<div class="nav-wrapper">
 				<a href="#" class="brand-logo center">Flash Bitácora</a>
@@ -27,17 +46,17 @@
 					</a>
 				</li>
 				<li>
-					<a class="btn btn-floating" href="#modalImages">
+					<a class="btn btn-floating" href="#modal-images">
 						<i class="material-icons my-blue">perm_media</i>
 					</a>
 				</li>
 				<li>
-					<a class="btn btn-floating" href="#modalEvent">
+					<a class="btn btn-floating" href="#modal-event">
 						<i class="material-icons my-green">today</i>
 					</a>
 				</li>
 				<li>
-					<a class="btn btn-floating" href="#modalVideo">
+					<a class="btn btn-floating" href="#modal-video">
 						<i class="material-icons my-purple">video_library</i>
 					</a>
 				</li>
@@ -45,5 +64,6 @@
 		</div>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
