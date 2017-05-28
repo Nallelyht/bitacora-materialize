@@ -11,15 +11,17 @@ enviar.addEventListener("click", mostrarPublicacion);
 function mostrarPublicacion(){
 	var publicacion = document.getElementById("publication");
 	var nPublicacion = document.createElement("div");
+	var nTexto = document.createElement("p")
 	var nTitulo = document.createElement("h3");
 
 	nPublicacion.className="card-panel" +" " + "hoverable";
 
 	nTitulo.innerHTML = titulo.value;
-	nPublicacion.innerHTML = mensaje.value;
+	nTexto.innerHTML = mensaje.value;
 	nPublicacion.appendChild(nTitulo);
+	nPublicacion.appendChild(nTexto);
 	publicacion.appendChild(nPublicacion);
-
+	
 }
 //variable para guardar el id de la entrada llamada autor
 //var autor = document.getElementById("autor");
