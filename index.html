@@ -16,13 +16,13 @@
 					<div class="row">
 						<div class="input-field col s12">
 							<input id="modal-title" type="text" class="validate" data-length="10" />
-							<label for="title">Título</label>
+							<label>Título</label>
 						</div>
 						<div class="input-field col s12">
 							<textarea id="modal-message" class="materialize-textarea"></textarea>
-							<label for="message">Mensaje</label>
+							<label>Mensaje</label>
 						</div>
-						<button class="btn waves-effect waves-light right my-orange" type="submit" name="action" data-publication="text">Publicar
+						<button id="send-text" class="btn waves-effect waves-light right" type="submit" name="action" data-publication="text">Publicar
 							<i class="material-icons right">send</i>
 						</button>
 					</div>
@@ -34,8 +34,8 @@
 				<div class="col s12">
 					<div class="row">
 						<div class="input-field col s12">
-							<input id="modal-image-title" type="text" class="validate" data-length="10" />
-							<label for="title">Título</label>
+							<input id="modal-image" type="text" class="validate" data-length="10" />
+							<label>Título</label>
 						</div>
 						<div class="file-field input-field col s12">
 							<div class="btn">
@@ -46,7 +46,7 @@
 								<input class="file-path validate" type="text">
 							</div>
 						</div>
-						<button class="btn waves-effect waves-light right blue accent-2" type="submit" name="action" data-publication="image">Publicar
+						<button class="btn waves-effect waves-light right" type="submit" name="action" data-publication="image">Publicar
 							<i class="material-icons right">send</i>
 						</button>
 					</div>
@@ -59,12 +59,12 @@
 					<div class="row">
 						<div class="input-field col s12">
 							<input type="text" class="validate" data-length="10" id="modal-event-title" />
-							<label for="first_name">Título</label>
+							<label>Título</label>
 						</div>
 						<div class="input-field col s12">
 							<input type="date" class="datepicker" id="modal-event-date" placeholder="Fecha del evento">
 						</div>
-						<button class="btn waves-effect waves-light right green accent-2" type="submit" name="action" data-publication="event">Publicar
+						<button class="btn waves-effect waves-light right" type="submit" name="action" data-publication="event">Publicar
 							<i class="material-icons right">send</i>
 						</button>
 					</div>
@@ -76,7 +76,10 @@
 				<a href="#" class="brand-logo center">Flash Bitácora</a>
 			</div>
 		</nav>
-		<section class="container" id="main"></section>
+		<section>
+			<h1 class="center flow-text"> Escribe lo que quieras.</h1>
+		</section>
+		<section class="container" id="publication"></section>
 		<div class="fixed-action-btn click-to-toggle toolbar">
 			<a class="btn-floating btn-large my-purplue">
 				<i class="large material-icons my-pink">mode_edit</i>
