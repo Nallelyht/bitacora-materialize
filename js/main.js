@@ -60,7 +60,7 @@ function subirImagen(){
 		nImagen.src = imagenFile;
 		console.log(nImagen);
 		nPublicacion.className = "card-panel  " + "hoverable";
-		nImagen.className = "image-responsive " + "col " +"s12";
+		nImagen.className = "responsive-img " + "col " +"s12";
 		nTitulo.innerHTML = tituloI.value;
 
 		nPublicacion.appendChild(nTitulo);
