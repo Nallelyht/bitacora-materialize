@@ -1,48 +1,73 @@
+/* jQuery para funcionalidad del modal*/
 $(document).ready(function () {
 	$(".modal").modal();
 });
-
+/* Variables globales y funciones para la publicacion de texto*/
 var mensaje = document.getElementById("modal-message");
 var titulo = document.getElementById("modal-title");
-var enviar= document.getElementById("send-text");
+var enviarT= document.getElementById("send-text");
 
-enviar.addEventListener("click", mostrarPublicacion);
+enviarT.addEventListener("click", mostrarTexto);
+enviarT.addEventListener("click", limpiarModal);
 
-function mostrarPublicacion(){
+function mostrarTexto(){
 	var publicacion = document.getElementById("publication");
 	var nPublicacion = document.createElement("div");
 	var nTexto = document.createElement("p")
 	var nTitulo = document.createElement("h3");
 
-	nPublicacion.className="card-panel" +" " + "hoverable";
+	nPublicacion.className="card-panel " + "hoverable";
 
 	nTitulo.innerHTML = titulo.value;
 	nTexto.innerHTML = mensaje.value;
 	nPublicacion.appendChild(nTitulo);
 	nPublicacion.appendChild(nTexto);
 	publicacion.appendChild(nPublicacion);
-	
+
 }
-//variable para guardar el id de la entrada llamada autor
-//var autor = document.getElementById("autor");
-//var boton = document.getElementById("boton");
-//
-////eventos para el contador de clicks, cuando se da click en la textarea o el input no cuenta el click
-//document.addEventListener("click", contadorClick);
-//tweet.addEventListener("click", sinClick);
-//autor.addEventListener("click", sinClick);
-//boton.addEventListener("click", sinClick);
-//
-///*funcion para mostrar los tweets, se declara la variable ponerTweet para guardar el id donde se va a enviar los nuevos tweets, las variables nTweet, linea,salto crean nuevos elementos, div, hr y br respectivamente, en el div se guarda el valor de la text area y el autor, todo se agrega al nodo ponerTweet*/
-//function mostrarTweet(){
-//
-//	var ponerTweet = document.getElementById("nuevoTweet");
-//	var nTweet = document.createElement("div");
-//	var linea = document.createElement("hr");
-//	var salto = document.createElement("br");
-//
-//	nTweet.innerHTML = tweet.value +"<br> Por "+ autor.value;
-//
-//	ponerTweet.appendChild(nTweet);
-//	ponerTweet.appendChild(linea);
-//}
+function limpiarModal(){
+	mensaje.value = "";
+	titulo.value = "";
+	tituloI.value = "";
+	textoI.value = "";
+}
+$('#modal-text').modal('close');
+/*termina la parte del texto*/
+
+/*variables globales y funciones para la publicacion de imagen*/
+var tituloI = document.getElementById("title-image");
+var imagen = document.getElementById("image-file");
+var enviarI = document.getElementById("send-image");
+var textoI = document.getElementById("image-text");
+
+
+imagen.addEventListener("change", subirImagen);
+enviarI.addEventListener("click", limpiarModal)
+
+
+
+function subirImagen(){
+
+	var reader =  new FileReader ();
+	reader.readAsDataURL(this.files[0])
+	reader.onload = function (){
+		var imagenFile = this.result;
+		var nImagen = document.createElement("img");
+		var publicacion = document.getElementById("publication");
+		var nPublicacion = document.createElement("div");
+		var nTitulo = document.createElement("h3");
+
+		nImagen.src = imagenFile;
+		console.log(nImagen);
+		nPublicacion.className = "card-panel  " + "hoverable";
+		nImagen.className = "image-responsive " + "col " +"s12";
+		nTitulo.innerHTML = tituloI.value;
+
+		nPublicacion.appendChild(nTitulo);
+		nPublicacion.appendChild(nImagen);
+		publicacion.appendChild(nPublicacion);
+
+		
+		
+	}
+}

@@ -22,7 +22,7 @@
 							<textarea id="modal-message" class="materialize-textarea"></textarea>
 							<label>Mensaje</label>
 						</div>
-						<button id="send-text" class="btn waves-effect waves-light right" type="submit" name="action" data-publication="text">Publicar
+						<button id="send-text" class="btn waves-effect waves-light right modal-close" type="submit" name="action" data-publication="text">Publicar
 							<i class="material-icons right">send</i>
 						</button>
 					</div>
@@ -34,7 +34,7 @@
 				<div class="col s12">
 					<div class="row">
 						<div class="input-field col s12">
-							<input id="modal-image" type="text" class="validate" data-length="10" />
+							<input id="title-image" type="text" class="validate" data-length="10" />
 							<label>Título</label>
 						</div>
 						<div class="file-field input-field col s12">
@@ -43,10 +43,10 @@
 								<input type="file" accept="image/*" id="image-file">
 							</div>
 							<div class="file-path-wrapper">
-								<input class="file-path validate" type="text">
+								<input id="image-text" class="file-path validate" type="text">
 							</div>
 						</div>
-						<button class="btn waves-effect waves-light right" type="submit" name="action" data-publication="image">Publicar
+						<button id="send-image" class="btn waves-effect waves-light right modal-close" type="submit" name="action" data-publication="image">Publicar
 							<i class="material-icons right">send</i>
 						</button>
 					</div>
@@ -64,7 +64,7 @@
 						<div class="input-field col s12">
 							<input type="date" class="datepicker" id="modal-event-date" placeholder="Fecha del evento">
 						</div>
-						<button class="btn waves-effect waves-light right" type="submit" name="action" data-publication="event">Publicar
+						<button class="btn waves-effect waves-light right modal-action modal-close" type="submit" name="action" data-publication="event">Publicar
 							<i class="material-icons right">send</i>
 						</button>
 					</div>
